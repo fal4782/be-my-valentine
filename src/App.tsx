@@ -84,7 +84,7 @@ function App() {
           />
           <div className="celebration">
             <img src="/Dance-Cat.gif" alt="Happy Cat" />
-            <h1>Yayayayay! 🎉</h1>
+            <h1>Yayayayay!</h1>
             <p className="love-message">You've made me the happiest person ever! ❤️</p>
           </div>
         </>

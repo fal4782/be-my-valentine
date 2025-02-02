@@ -7,9 +7,14 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: rgb(246,190,216);
-  background: linear-gradient(233deg, rgba(246,190,216,1) 0%, rgba(232,167,167,1) 100%);  font-family: "Playfair Display", serif;
-  overflow: hidden; 
+  background: rgb(246, 190, 216);
+  background: linear-gradient(
+    233deg,
+    rgba(246, 190, 216, 1) 0%,
+    rgba(232, 167, 167, 1) 100%
+  );
+  font-family: "Playfair Display", serif;
+  overflow: hidden;
   cursor: url("/paw.png"), auto;
 }
 
@@ -113,6 +118,9 @@ body {
 
 /* Media queries for responsiveness */
 @media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
   .container {
     padding: 1.5rem;
   }
@@ -123,7 +131,11 @@ body {
 
   .yes-button,
   .no-button {
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 0.6rem 1.5rem;
+  }
+
+  .celebration img {
+    height: 200px;
   }
 }
