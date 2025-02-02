@@ -10,12 +10,9 @@ body {
   background: linear-gradient(135deg, #f4e2d8 0%, #f9f1f0 100%);
   font-family: "Roboto", sans-serif;
   overflow: hidden; /* Prevent scrolling */
-  cursor: url("../public/paw.png"), auto;
+  cursor: url("/paw.png"), auto;
 }
-button,
-a {
-  cursor: url("../public/paw.png"), pointer; /* Cat paw cursor for buttons and links */
-}
+
 .container {
   text-align: center;
   background: rgba(255, 255, 255, 0.95);
@@ -33,15 +30,8 @@ a {
   color: #d14d72;
   margin-bottom: 1.5rem;
   opacity: 0;
-  transform: translateY(-20px);
   animation: fadeIn 0.5s forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  /* cursor: default; */
 }
 
 .buttons {
@@ -50,6 +40,14 @@ a {
   gap: 1rem;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 .yes-button,
@@ -59,9 +57,9 @@ a {
   margin: 0.5rem;
   border: none;
   border-radius: 25px;
-  cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 500;
+  transition: transform 0.3s ease;
 }
 
 .yes-button {
@@ -69,9 +67,22 @@ a {
   color: white;
 }
 
+.yes-button:hover {
+  cursor: url("/heart-love.svg"), auto;
+}
+
 .no-button {
   background: #6b5b95;
   color: white;
+}
+
+.no-button:hover {
+  cursor: url("/broken-heart.png"), auto;
+}
+
+.yes-button:hover,
+.no-button:hover {
+  transform: scale(1.1);
 }
 
 .celebration {

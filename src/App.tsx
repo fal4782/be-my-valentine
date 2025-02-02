@@ -28,10 +28,16 @@ function App() {
     const y = Math.random() * maxY;
     setNoButtonPosition({ x, y });
     setNoButtonMoved(true);
+    document.body.style.cursor = "url('/broken-heart.png'), auto";
+  };
+
+  const handleYesHover = () => {
+    document.body.style.cursor = "url('/heart-love.png'), auto";
   };
 
   const handleYesClick = () => {
     setYesClicked(true);
+    document.body.style.cursor = "url('/heart.png'), auto";
   };
 
   return (
@@ -39,7 +45,11 @@ function App() {
       {!yesClicked && <h1 className="title">Will you be my Valentine? 🌹</h1>}
       {!yesClicked ? (
         <div className="buttons">
-          <button className="yes-button" onClick={handleYesClick}>
+          <button
+            className="yes-button"
+            onClick={handleYesClick}
+            onMouseEnter={handleYesHover}
+          >
             Yes
           </button>
           <button
