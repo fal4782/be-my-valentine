@@ -7,10 +7,9 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, #f4e2d8 0%, #f9f1f0 100%);
-  /* font-family: "Roboto", sans-serif; */
-  font-family: "Playfair Display", serif;
-  overflow: hidden; /* Prevent scrolling */
+  background: rgb(246,190,216);
+  background: linear-gradient(233deg, rgba(246,190,216,1) 0%, rgba(232,167,167,1) 100%);  font-family: "Playfair Display", serif;
+  overflow: hidden; 
   cursor: url("/paw.png"), auto;
 }
 
@@ -26,13 +25,11 @@ body {
 }
 
 .title {
-  /* font-family: "Playfair Display", serif; */
   font-size: 2.5rem;
   color: #d14d72;
   margin-bottom: 1.5rem;
   opacity: 0;
   animation: fadeIn 0.5s forwards;
-  /* cursor: default; */
 }
 
 .buttons {
@@ -105,9 +102,13 @@ body {
 }
 
 .celebration h1 {
-  font-family: "Playfair Display", serif;
   color: #d14d72;
   margin-top: 1rem;
+}
+
+.love-message {
+  font-size: 1.2rem;
+  color: #666;
 }
 
 /* Media queries for responsiveness */
