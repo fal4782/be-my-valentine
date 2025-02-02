@@ -8,7 +8,8 @@ body {
   align-items: center;
   height: 100vh;
   background: linear-gradient(135deg, #f4e2d8 0%, #f9f1f0 100%);
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "Playfair Display", serif;
   overflow: hidden; /* Prevent scrolling */
   cursor: url("/paw.png"), auto;
 }
@@ -25,7 +26,7 @@ body {
 }
 
 .title {
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
   font-size: 2.5rem;
   color: #d14d72;
   margin-bottom: 1.5rem;
@@ -101,4 +102,27 @@ body {
 .celebration img {
   height: auto;
   border-radius: 10px;
+}
+
+.celebration h1 {
+  font-family: "Playfair Display", serif;
+  color: #d14d72;
+  margin-top: 1rem;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .yes-button,
+  .no-button {
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+  }
 }

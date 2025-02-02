@@ -1,4 +1,3 @@
-// filepath: /home/falguni/Desktop/small-projects/be-my-valentine/src/App.tsx
 import { useState, useEffect } from "react";
 import "./App.css";
 import Confetti from "react-confetti";
@@ -20,6 +19,7 @@ function App() {
   }, []);
 
   const handleNoHover = () => {
+    document.body.style.cursor = "url('/broken-heart.png'), auto";
     const buttonWidth = 100; // Approximate width of the button
     const buttonHeight = 50; // Approximate height of the button
     const maxX = window.innerWidth - buttonWidth;
@@ -28,7 +28,6 @@ function App() {
     const y = Math.random() * maxY;
     setNoButtonPosition({ x, y });
     setNoButtonMoved(true);
-    document.body.style.cursor = "url('/broken-heart.png'), auto";
   };
 
   const handleYesHover = () => {
@@ -38,6 +37,14 @@ function App() {
   const handleYesClick = () => {
     setYesClicked(true);
     document.body.style.cursor = "url('/heart.png'), auto";
+    playAudio();
+  };
+
+  const playAudio = () => {
+    const audio = new Audio("/happihappihappi.mp3");
+    audio.play();
+    audio.loop = true;
+    audio.volume = 0.5;
   };
 
   return (
@@ -76,10 +83,8 @@ function App() {
             recycle={true}
           />
           <div className="celebration">
-            <img
-              src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXl5cTBxbTdwaTZ1ODMwZ2gzbXA5bjRjNXlpd3BvYzl5NDZreDNxaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/S5h4gvxxc1qlG/giphy.gif"
-              alt="Happy Cat"
-            />
+            <img src="/Dance-Cat.gif" alt="Happy Cat" />
+            <h1>Yayayayay! 🎉</h1>
           </div>
         </>
       )}
