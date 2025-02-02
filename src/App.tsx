@@ -1,6 +1,7 @@
 // filepath: /home/falguni/Desktop/small-projects/be-my-valentine/src/App.tsx
 import { useState, useEffect } from "react";
 import "./App.css";
+import Confetti from "react-confetti";
 
 function App() {
   const [yesClicked, setYesClicked] = useState(false);
@@ -58,12 +59,19 @@ function App() {
           </button>
         </div>
       ) : (
-        <div className="celebration">
-          <img
-            src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXl5cTBxbTdwaTZ1ODMwZ2gzbXA5bjRjNXlpd3BvYzl5NDZreDNxaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/S5h4gvxxc1qlG/giphy.gif"
-            alt="Happy Cat"
+        <>
+          <Confetti
+            width={window.innerWidth}
+            height={window.innerHeight}
+            recycle={true}
           />
-        </div>
+          <div className="celebration">
+            <img
+              src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXl5cTBxbTdwaTZ1ODMwZ2gzbXA5bjRjNXlpd3BvYzl5NDZreDNxaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/S5h4gvxxc1qlG/giphy.gif"
+              alt="Happy Cat"
+            />
+          </div>
+        </>
       )}
     </div>
   );
