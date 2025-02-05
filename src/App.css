@@ -15,7 +15,7 @@ body {
   );
   font-family: "Playfair Display", serif;
   overflow: hidden;
-  cursor: url("/paw.png"), auto;
+  cursor: url("/initial.png"), auto;
 }
 
 .container {
@@ -71,7 +71,7 @@ body {
 }
 
 .yes-button:hover {
-  cursor: url("/heart-love.svg"), auto;
+  cursor: url("/yes-hover.png"), auto;
 }
 
 .no-button {
@@ -80,7 +80,7 @@ body {
 }
 
 .no-button:hover {
-  cursor: url("/broken-heart.png"), auto;
+  cursor: url("/no.png"), auto;
 }
 
 .yes-button:hover,

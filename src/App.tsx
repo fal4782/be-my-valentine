@@ -19,9 +19,9 @@ function App() {
   }, []);
 
   const handleNoHover = () => {
-    document.body.style.cursor = "url('/broken-heart.png'), auto";
-    const buttonWidth = 100; // Approximate width of the button
-    const buttonHeight = 50; // Approximate height of the button
+    document.body.style.cursor = "url('/no.png'), auto";
+    const buttonWidth = 100; 
+    const buttonHeight = 50;
     const maxX = window.innerWidth - buttonWidth;
     const maxY = window.innerHeight - buttonHeight;
     const x = Math.random() * maxX;
@@ -31,12 +31,12 @@ function App() {
   };
 
   const handleYesHover = () => {
-    document.body.style.cursor = "url('/heart-love.png'), auto";
+    document.body.style.cursor = "url('/yes-hover.png'), auto";
   };
 
   const handleYesClick = () => {
     setYesClicked(true);
-    document.body.style.cursor = "url('/heart.png'), auto";
+    document.body.style.cursor = "url('/celebration.png'), auto";
     playAudio();
   };
 
