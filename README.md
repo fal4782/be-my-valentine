@@ -11,7 +11,7 @@ A delightful and interactive way to pop the Valentine's question! This adorable 
 - Festive confetti shower
 - Sweet celebration music
 - Beautiful gradient background
-- Personalized proposal with custom URLs (e.g., `/Rahmat` shows "Rahmat, will you be my Valentine?")
+- Personalized proposal with custom URLs (e.g., `/Pookie` shows "Pookie, will you be my Valentine?")
 
 ## 💝 How It Works
 
