@@ -1,6 +1,7 @@
 export const CONSTANTS = {
   PROPOSALPREFIX: {
-    WITHNAME: (name: string) => `${name}, will`,
+    WITHNAME: (name: string) =>
+      `${name.charAt(0).toUpperCase() + name.slice(1)}, will`,
     WITHOUTNAME: "Will",
   },
   PROPOSALSUFFIX: "you be my Valentine? 🌹",
