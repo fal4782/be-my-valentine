@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import Confetti from "react-confetti";
+import { useParams } from "react-router-dom";
 
 function App() {
   const [yesClicked, setYesClicked] = useState(false);
   const [noButtonPosition, setNoButtonPosition] = useState({ x: 0, y: 0 });
   const [noButtonMoved, setNoButtonMoved] = useState(false);
+  const { name } = useParams();
 
   useEffect(() => {
     const yesButton = document.querySelector(".yes-button");
@@ -20,7 +22,7 @@ function App() {
 
   const handleNoHover = () => {
     document.body.style.cursor = "url('/no.png'), auto";
-    const buttonWidth = 100; 
+    const buttonWidth = 100;
     const buttonHeight = 50;
     const maxX = window.innerWidth - buttonWidth;
     const maxY = window.innerHeight - buttonHeight;
@@ -49,7 +51,11 @@ function App() {
 
   return (
     <div className="container">
-      {!yesClicked && <h1 className="title">Will you be my Valentine? 🌹</h1>}
+      {!yesClicked && (
+        <h1 className="title">
+          {name ? `${name}, will` : "Will"} you be my Valentine? 🌹
+        </h1>
+      )}
       {!yesClicked ? (
         <div className="buttons">
           <button
@@ -85,7 +91,9 @@ function App() {
           <div className="celebration">
             <img src="/Dance-Cat.gif" alt="Happy Cat" />
             <h1>Yayayayay!</h1>
-            <p className="love-message">You've made me the happiest person ever! ❤️</p>
+            <p className="love-message">
+              You've made me the happiest person ever! ❤️
+            </p>
           </div>
         </>
       )}

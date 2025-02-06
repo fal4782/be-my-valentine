@@ -1,50 +1,50 @@
-# React + TypeScript + Vite
+# 🌹 Be My Valentine?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A delightful and interactive way to pop the Valentine's question! This adorable web app features:
 
-Currently, two official plugins are available:
+## ✨ Special Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- A charming proposal with style
+- Playful "Yes" and "No" buttons (but the "No" button has a mind of its own! 😉)
+- Cute cursor changes as you hover
+- Happy cat dance celebration when they say yes!
+- Festive confetti shower
+- Sweet celebration music
+- Beautiful gradient background
+- Personalized proposal with custom URLs (e.g., `/Rahmat` shows "Rahmat, will you be my Valentine?")
 
-## Expanding the ESLint configuration
+## 💝 How It Works
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+When your special someone opens the app, they'll be greeted with a beautiful "Will you be my Valentine?" message. The fun begins when they try to interact with the buttons:
 
-- Configure the top-level `parserOptions` property like this:
+- The "Yes" button brings joy and celebration
+- The "No" button plays hard to get (literally!)
+- Once they click "Yes", the celebration begins with music, confetti, and a dancing cat!
+- Add their name to the URL (like `/Pookie`) for a personalized proposal!
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🚀 Tech Stack
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- React + TypeScript
+- Vite
+- CSS Animations
+- React Confetti
+- React Router
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 💕 Make It Yours
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Clone this repository
+2. Install dependencies: `npm install`
+3. Run locally: `npm run dev`
+4. Customize the messages and styling to make it perfect for your Valentine!
+
+## 🎨 Customization
+
+Feel free to modify:
+
+- The proposal message in `App.tsx`
+- Colors in `App.css`
+- Images and cursor icons in the `public` folder
+- Celebration message and animations
+- Add a name to the URL for personalization (e.g., `be-my-valentine.com/Pookie`)
+
+Made with ❤️ for that special someone!
