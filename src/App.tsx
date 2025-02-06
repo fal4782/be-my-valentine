@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Confetti from "react-confetti";
 import { useParams } from "react-router-dom";
+import constants, { CONSTANTS } from "./constants";
 
 function App() {
   const [yesClicked, setYesClicked] = useState(false);
@@ -53,7 +54,10 @@ function App() {
     <div className="container">
       {!yesClicked && (
         <h1 className="title">
-          {name ? `${name}, will` : "Will"} you be my Valentine? 🌹
+          {name
+            ? CONSTANTS.PROPOSALPREFIX.WITHNAME(name)
+            : constants.PROPOSALPREFIX.WITHOUTNAME}{" "}
+          {CONSTANTS.PROPOSALSUFFIX}{" "}
         </h1>
       )}
       {!yesClicked ? (
@@ -63,7 +67,7 @@ function App() {
             onClick={handleYesClick}
             onMouseEnter={handleYesHover}
           >
-            Yes
+            {CONSTANTS.BUTTONS.YES}
           </button>
           <button
             className="no-button"
@@ -78,7 +82,7 @@ function App() {
                 : {}
             }
           >
-            No
+            {CONSTANTS.BUTTONS.NO}
           </button>
         </div>
       ) : (
@@ -90,10 +94,8 @@ function App() {
           />
           <div className="celebration">
             <img src="/Dance-Cat.gif" alt="Happy Cat" />
-            <h1>Yayayayay!</h1>
-            <p className="love-message">
-              You've made me the happiest person ever! ❤️
-            </p>
+            <h1>{CONSTANTS.CELEBRATION.TITLE}</h1>
+            <p className="love-message">{CONSTANTS.CELEBRATION.MESSAGE} </p>
           </div>
         </>
       )}
