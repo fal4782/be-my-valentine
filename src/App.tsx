@@ -72,6 +72,7 @@ function App() {
           <button
             className="no-button"
             onMouseEnter={handleNoHover}
+            onClick={handleNoHover} // For mobile users
             style={
               noButtonMoved
                 ? {
