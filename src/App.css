@@ -7,12 +7,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: rgb(246, 190, 216);
-  background: linear-gradient(
-    233deg,
-    rgba(246, 190, 216, 1) 0%,
-    rgba(232, 167, 167, 1) 100%
-  );
+  background: #e19595;
+  background: linear-gradient(233deg, #f1afb9 0%, #e19595 100%);
   font-family: "Playfair Display", serif;
   overflow: hidden;
   cursor: url("/initial.png"), auto;
@@ -20,7 +16,7 @@ body {
 
 .container {
   text-align: center;
-  background: rgba(255, 255, 255, 0.95);
+  background: #FFF2E8;
   padding: 2.5rem;
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -31,7 +27,7 @@ body {
 
 .title {
   font-size: 2.5rem;
-  color: #d14d72;
+  color: #ce466c;
   margin-bottom: 1.5rem;
   opacity: 0;
   animation: fadeIn 0.5s forwards;
@@ -66,7 +62,7 @@ body {
 }
 
 .yes-button {
-  background: #d14d72;
+  background: #ce466c;
   color: white;
 }
 
@@ -107,7 +103,7 @@ body {
 }
 
 .celebration h1 {
-  color: #d14d72;
+  color: #ce466c;
   margin-top: 1rem;
 }
 
